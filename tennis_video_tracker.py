@@ -240,11 +240,11 @@ def track_tennis_video(
 
                 # HIT DETECTION
                 # hit = when distance with the ball is close, and ball changes direction
-                if current_y > prev_y and 8 < np.abs(current_y - prev_y) < 30:
+                if current_y > prev_y and 8 < np.abs(current_y - prev_y) < 200:
                     if ball_direction != "down":
                         change_direction = True
                     ball_direction = "down"
-                if current_y < prev_y and 8 < np.abs(current_y - prev_y) < 30:
+                if current_y < prev_y and 8 < np.abs(current_y - prev_y) < 200:
                     if ball_direction != "up":
                         change_direction = True
                     ball_direction = "up"
